@@ -1,0 +1,21 @@
+server:
+  port: 8901
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_seckill?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 39.105.189.141
+    port: 6379
+    password: qfjava
+    database: 0
+    timeout: 5000
+#自定义
+skill:
+  maxcount: 3  #自定义属性 设置秒杀的数量上限
+  passkey: ysXcCD2h/XeGNkNzolBVNA==  #密码的key
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
