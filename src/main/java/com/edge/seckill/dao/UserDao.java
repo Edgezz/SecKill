@@ -1,5 +1,6 @@
 package com.edge.seckill.dao;
 
+import com.edge.seckill.dto.LoginDto;
 import com.edge.seckill.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -13,7 +14,7 @@ import org.apache.ibatis.annotations.Select;
  */
 public interface UserDao {
     @Insert("insert into t_user(phone, password) values (#{phone}, #{password})")
-    int insert(User user);
+    int insert(LoginDto dto);
 
     @Select("select * from t_user where phone = #{phone}")
     User selectByPhone(String phone);
